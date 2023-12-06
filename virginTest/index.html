@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Virgin Test</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <div class="container">
+                <div class="start-test test-card">
+                    <h2>Otestuj úroveň svojho panictva</h2>
+                    <button id="start-btn" class="test-btn" onclick="startTest()">začni test</button>
+                </div>
+                <div class="question-card test-card hide">
+                    <h2 class="question">Mal si niekedy sex?</h2>
+                    <ul class="answers-list">
+                        <li>
+                            <span class="answer-check yes" onclick="checkAnswer(event.target)"></span>
+                            <span class="answer">áno</span>
+                        </li>
+                        <li>
+                            <span class="answer-check" onclick="checkAnswer(event.target)"></span>
+                            <span class="answer">nie</span>
+                        </li>
+                    </ul>
+                    <h3 class="error-alert hide">Musíš zvoliť jednu možnosť</h3>
+                    <div class="btns">
+                        <button id="end-test" class="test-btn hide" onclick="calculatePercentage(), endTest()">ukončiť test</button>
+                        <button id="next-question" class="test-btn question-control" onclick="calculatePercentage(), nextQuestion()">Ďalšia Otázka</button>
+                    </div>
+                </div>
+                <div class="result-card test-card hide">
+                    <h2 class="result-title">Si panic na <span id="viriginity-level"></span>%</h2>
+                    <button id="repeat-test" class="test-btn" onclick="startAgain()">Spustiť test znovu</button>
+                </div>
+        </div>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
